@@ -10,3 +10,9 @@ allow platform_app sysfs_thermal:file r_file_perms;
 
 # Allow SystemUI to set touch sensitivity prop
 allow platform_app debug_prop:property_service set;
+
+# Allow LiveDisplay HAL service to be found
+hal_client_domain(platform_app, hal_lineage_livedisplay)
+
+# Allow Touch HAL service to be found
+hal_client_domain(platform_app, hal_lineage_touch)

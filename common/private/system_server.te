@@ -8,6 +8,8 @@ allow system_server pocket_judge_sysfs:file rw_file_perms;
 # Use HALs
 hal_client_domain(system_server, hal_lineage_touch)
 hal_client_domain(system_server, hal_lineage_powershare)
+hal_client_domain(system_server, hal_lineage_health)
+hal_client_domain(system_server, hal_lineage_livedisplay)
 
 # Let system server find auxiliary camera properties
 get_prop(system_server, vendor_persist_camera_prop)
